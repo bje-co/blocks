@@ -1,0 +1,85 @@
+@use 'sass:math';
+
+$size: 48px;
+$speed: 500ms;
+$ball-size: $size * 0.25;
+$gap-size: $size * 0.125;
+$background-color: rgb(0 0 0 / 50%);
+
+._ {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.Suspending {
+  position: relative;
+  display: inline-block;
+  width: math.round($size);
+  height: math.round($size);
+
+  div {
+    position: absolute;
+    top: math.round(($size - $ball-size) * 0.5);
+    width: math.round($ball-size);
+    height: math.round($ball-size);
+    border-radius: 50%;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+    background: $background-color;
+
+    &:nth-child(1) {
+      left: math.round($gap-size);
+      animation: ellipsis-enter $speed infinite;
+    }
+
+    &:nth-child(2) {
+      left: math.round($gap-size);
+      animation: ellipsis-move $speed infinite;
+    }
+
+    &:nth-child(3) {
+      left: math.round($gap-size * 4);
+      animation: ellipsis-move $speed infinite;
+    }
+
+    &:nth-child(4) {
+      left: math.round($gap-size * 7);
+      animation: ellipsis-exit $speed infinite;
+    }
+  }
+}
+
+@keyframes ellipsis-enter {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes ellipsis-move {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(math.round($gap-size * 3), 0);
+  }
+}
+
+@keyframes ellipsis-exit {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
