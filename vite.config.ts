@@ -23,7 +23,12 @@ export default defineConfig({
       fileName: (format) => `main.${format === 'es' ? 'mjs' : 'cjs'}`,
     },
     rollupOptions: {
-      external: ['react', 'react/jsx-runtime', 'react-error-boundary'],
+      external: [
+        'react',
+        'react/jsx-runtime',
+        'react-error-boundary',
+        // '@bjeco/blocks',
+      ],
       input: Object.fromEntries(
         // https://rollupjs.org/configuration-options/#input
         glob
