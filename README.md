@@ -11,7 +11,7 @@ A collection of utility React components.
 
 ## components
 
-### [Boundaries](components/Boundaries/Boundaries.tsx)
+### [Boundaries](src/components/Boundaries/Boundaries.tsx)
 
 A component that wraps its children in an ErrorBoundary and Suspense.
 It provides default components for error and suspense fallbacks,
@@ -27,7 +27,7 @@ which can be overridden by passing custom components as props.
 
 ---
 
-### [ExternalLink](components/ExternalLink/ExternalLink.tsx)
+### [ExternalLink](src/components/ExternalLink/ExternalLink.tsx)
 
 A component for rendering external links with appropriate attributes.
 It sets the `target` to `_blank` and adds `noopener` and `noreferrer` to the `rel` attribute.
@@ -40,7 +40,7 @@ It sets the `target` to `_blank` and adds `noopener` and `noreferrer` to the `re
 
 ---
 
-### [Placeholder](components/Placeholder/Placeholder.tsx)
+### [Placeholder](src/components/Placeholder/Placeholder.tsx)
 
 A simple placeholder component that can display JSON data.
 

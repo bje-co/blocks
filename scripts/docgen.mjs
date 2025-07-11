@@ -20,7 +20,8 @@ const packageName = packageJson.name || 'Component Documentation';
 const packageDescription = packageJson.description || '';
 
 // === Setup paths ===
-const SRC_DIR = path.resolve(__dirname, '../src');
+const SRC_DIRNAME = 'src';
+const SRC_DIR = path.resolve(__dirname, `../${SRC_DIRNAME}`);
 const ENTRY_FILE = path.resolve(SRC_DIR, 'index.ts');
 const OUTPUT_FILE = path.resolve(__dirname, '../README.md');
 
@@ -127,7 +128,7 @@ Array.from(componentFiles)
           : '';
 
       const sectionBlock = [
-        `### [${displayName}](${relPath})`,
+        `### [${displayName}](${path.join(SRC_DIRNAME, relPath)})`,
         ``,
         description,
         ``,
