@@ -71,6 +71,7 @@
   "clean-package": {
     "remove": [
       "clean-package",
+      "devDependencies",
       "packageManager",
       "prettier",
       "scripts"
