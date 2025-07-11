@@ -71,7 +71,9 @@
   "clean-package": {
     "remove": [
       "clean-package",
-      "packageManager"
+      "packageManager",
+      "prettier",
+      "scripts"
     ]
   }
 }
