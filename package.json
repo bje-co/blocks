@@ -25,7 +25,7 @@
   "scripts": {
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "prepublishOnly": "yarn build",
+    "prepublishOnly": "yarn build && yarn run clear-package-json package.json > package.json",
     "dev": "storybook dev -p 6006 --no-open",
     "build-storybook": "storybook build"
   },
@@ -44,6 +44,7 @@
     "@types/react": "19.1.8",
     "@types/react-dom": "19.1.6",
     "@vitejs/plugin-react-swc": "3.10.2",
+    "clean-publish": "5.2.2",
     "eslint": "9.29.0",
     "eslint-plugin-react-hooks": "5.2.0",
     "eslint-plugin-react-refresh": "0.4.20",
@@ -65,5 +66,11 @@
   "packageManager": "yarn@4.9.2",
   "dependencies": {
     "react-error-boundary": "6.0.0"
+  },
+  "clean-publish": {
+    "withoutPublish": true,
+    "fields": [
+      "packageManager"
+    ]
   }
 }
