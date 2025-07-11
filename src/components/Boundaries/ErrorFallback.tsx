@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
 import type { FallbackProps } from 'react-error-boundary';
-import { isDev } from '@bjeco/blocks';
+import { isDev } from '../../utils';
 
 const ErrorFallback = ({ error, resetErrorBoundary }: FallbackProps) => {
   const handleTryAgain = useCallback(() => {

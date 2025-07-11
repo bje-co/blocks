@@ -1,3 +1,3 @@
 # @bjeco/blocks
 
-Test publishing
+Test publish
