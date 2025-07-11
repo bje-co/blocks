@@ -19,11 +19,11 @@ which can be overridden by passing custom components as props.
 
 ### Props
 
-| Name              | Type                                 | Required | Default         | Description                                             |
-| ----------------- | ------------------------------------ | -------- | --------------- | ------------------------------------------------------- |
-| ErrorComponent    | `React.ComponentType<FallbackProps>` | No       | Custom function | Can provide an ErrorComponent to show as a fallback.    |
-| SuspenseComponent | `React.ComponentType<SuspenseProps>` | No       | Custom function | Can provide an SuspenseComponent to show as a fallback. |
-| children          | `React.ReactNode`                    | No       | -               |                                                         |
+| Name | Type | Required | Default | Description |
+|------|------|----------|---------|-------------|
+| ErrorComponent | `React.ComponentType<FallbackProps>` | No | Custom function | Can provide an ErrorComponent to show as a fallback. |
+| SuspenseComponent | `React.ComponentType<SuspenseProps>` | No | Custom function | Can provide an SuspenseComponent to show as a fallback. |
+| children | `React.ReactNode` | No | - |  |
 
 ---
 
@@ -34,9 +34,9 @@ It sets the `target` to `_blank` and adds `noopener` and `noreferrer` to the `re
 
 ### Props
 
-| Name | Type     | Required | Default | Description |
-| ---- | -------- | -------- | ------- | ----------- |
-| rel  | `string` | No       | -       |             |
+| Name | Type | Required | Default | Description |
+|------|------|----------|---------|-------------|
+| rel | `string` | No | - |  |
 
 ---
 
@@ -46,14 +46,13 @@ A simple placeholder component that can display JSON data.
 
 ### Props
 
-| Name | Type    | Required | Default | Description |
-| ---- | ------- | -------- | ------- | ----------- |
-| data | `| null |
-
+| Name | Type | Required | Default | Description |
+|------|------|----------|---------|-------------|
+| data | `| null
 | boolean
 | number
 | string
 | Json[]
-| { [prop: string]: Json }` | No | - | |
+| { [prop: string]: Json }` | No | - |  |
 
 ---
