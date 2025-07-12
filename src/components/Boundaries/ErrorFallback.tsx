@@ -1,24 +1,17 @@
 'use client';
 
-import { useCallback } from 'react';
-import type { FallbackProps } from 'react-error-boundary';
-import { isDev } from '../../utils';
+import { useErrorBoundary } from 'react-error-boundary';
 
-const ErrorFallback = ({ error, resetErrorBoundary }: FallbackProps) => {
-  const handleTryAgain = useCallback(() => {
-    if (resetErrorBoundary) {
-      resetErrorBoundary();
-    }
-  }, [resetErrorBoundary]);
+const ErrorFallback = () => {
+  const { resetBoundary } = useErrorBoundary();
 
   return (
     <div role='alert'>
-      {isDev && (
-        <code>
-          <pre>{error?.message}</pre>
-        </code>
-      )}
-      <button onClick={handleTryAgain} type='button'>
+      <button
+        style={{ backgroundColor: 'red', color: 'white' }}
+        onClick={resetBoundary}
+        type='button'
+      >
         Try again
       </button>
     </div>

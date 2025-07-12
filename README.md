@@ -21,7 +21,7 @@ which can be overridden by passing custom components as props.
 
 | Name | Type | Required | Default | Description |
 |------|------|----------|---------|-------------|
-| ErrorComponent | `React.ComponentType<FallbackProps>` | No | Custom function | Can provide an ErrorComponent to show as a fallback. |
+| ErrorComponent | `React.ComponentType` | No | Custom function | Can provide an ErrorComponent to show as a fallback. |
 | SuspenseComponent | `React.ComponentType<SuspenseProps>` | No | Custom function | Can provide an SuspenseComponent to show as a fallback. |
 | children | `React.ReactNode` | No | - |  |
 

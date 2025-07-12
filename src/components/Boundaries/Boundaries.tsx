@@ -1,7 +1,7 @@
 'use client';
 
 import { Suspense, type SuspenseProps } from 'react';
-import { ErrorBoundary, type FallbackProps } from 'react-error-boundary';
+import { ErrorBoundary } from 'react-error-boundary';
 
 import DefaultErrorFallback from './ErrorFallback';
 import DefaultSuspenseFallback from './SuspenseFallback';
@@ -10,7 +10,7 @@ export interface BoundariesProps {
   /**
    * Can provide an ErrorComponent to show as a fallback.
    */
-  ErrorComponent?: React.ComponentType<FallbackProps>;
+  ErrorComponent?: React.ComponentType;
   /**
    * Can provide an SuspenseComponent to show as a fallback.
    */
@@ -31,16 +31,7 @@ export function Boundaries({
 }: BoundariesProps) {
   return (
     <Suspense fallback={<SuspenseComponent />}>
-      <ErrorBoundary
-        fallbackRender={({ error, resetErrorBoundary }) => (
-          <ErrorComponent
-            error={error}
-            resetErrorBoundary={resetErrorBoundary}
-          />
-        )}
-      >
-        {children}
-      </ErrorBoundary>
+      <ErrorBoundary fallback={<ErrorComponent />}>{children}</ErrorBoundary>
     </Suspense>
   );
 }
