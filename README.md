@@ -25,7 +25,6 @@ which can be overridden by passing custom components as props.
 | SuspenseComponent | `React.ComponentType<SuspenseProps>` | No | Custom function | Can provide an SuspenseComponent to show as a fallback. |
 | children | `React.ReactNode` | No | - |  |
 
----
 
 ### [ExternalLink](src/components/ExternalLink/ExternalLink.tsx)
 
@@ -38,7 +37,6 @@ It sets the `target` to `_blank` and adds `noopener` and `noreferrer` to the `re
 |------|------|----------|---------|-------------|
 | rel | `string` | No | - |  |
 
----
 
 ### [Placeholder](src/components/Placeholder/Placeholder.tsx)
 
@@ -54,5 +52,3 @@ A simple placeholder component that can display JSON data.
 | string
 | Json[]
 | { [prop: string]: Json }` | No | - |  |
-
----

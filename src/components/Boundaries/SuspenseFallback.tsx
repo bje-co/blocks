@@ -1,3 +1,5 @@
+'use client';
+
 import styles from './Boundaries.module.scss';
 
 const SuspenseFallback = () => {

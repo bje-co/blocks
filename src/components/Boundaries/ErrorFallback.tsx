@@ -1,3 +1,5 @@
+'use client';
+
 import { useCallback } from 'react';
 import type { FallbackProps } from 'react-error-boundary';
 import { isDev } from '../../utils';

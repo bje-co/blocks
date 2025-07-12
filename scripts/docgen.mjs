@@ -96,6 +96,8 @@ Array.from(componentFiles)
     const section = relPath.split('/')[0];
     const components = Array.isArray(parsed) ? parsed : [parsed];
 
+    console.dir(components, { depth: null });
+
     components.forEach((component) => {
       const displayName = component.displayName || 'UnnamedComponent';
       const description =
@@ -163,7 +165,7 @@ markdown += toc.join('\n') + '\n\n';
 sortedSections.forEach((section) => {
   markdown += `## ${section}\n\n`;
   sectionContentMap[section].forEach((entry) => {
-    markdown += entry.content + '\n---\n\n';
+    markdown += entry.content + '\n\n';
   });
 });
 
