@@ -9,12 +9,12 @@
     "url": "https://github.com/bje-co/blocks.git"
   },
   "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/main.d.mts",
   "exports": {
     ".": {
-      "import": {
-        "types": "./dist/main.d.mts",
-        "default": "./dist/index.js"
-      }
+      "types": "./dist/main.d.mts",
+      "default": "./dist/index.js"
     }
   },
   "files": [
