@@ -1,6 +1,6 @@
 {
-  "*.{css,scss,sass,less}": ["stylelint --fix", "prettier --write"],
+  "*.{css,scss,sass,less}": ["stylelint --fix", "yarn pretty-quick --staged"],
   "**/*.ts": "tsc-files --noEmit",
-  "*.{js,jsx,ts,tsx}": ["eslint --fix", "prettier --write"],
-  "*.{mdx,html}": ["prettier --write"]
+  "*.{js,jsx,ts,tsx}": ["eslint --fix", "yarn pretty-quick --staged"],
+  "*.{mdx,html}": ["yarn pretty-quick --staged"]
 }
